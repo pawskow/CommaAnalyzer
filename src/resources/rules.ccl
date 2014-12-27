@@ -1,0 +1,1647 @@
+import("resources/wyrazy.lex", "wyrazy")
+
+match_rules(
+
+	apply(
+		match(
+			repeat(
+				not(inter(class[0], {praet, fin}))
+			),
+			optional(inter(class[0], {praet, fin}))
+		),
+		actions(
+			mark(M, "Podzdanie")
+		)
+	);
+
+
+
+//wolacz na poczatku zdania - przecinek po ostatnim
+    apply(
+		match(
+			inter(
+				if(llook(0, begin, $P,
+ 					in({voc}, cas[$P])
+ 				),
+ 				gnd[$P]
+			), gnd[0])
+
+		),
+		actions(
+			mark(M, "Wolacz")
+		)
+	);
+
+
+
+//przed tym wstawic przecinek
+	apply(
+		match(
+			optional(inter(lex(lower(base[0]), "wyrazy"), ["przed"])),
+			inter(lex(lower(base[0]), "wyrazy"), ["przecinek"])
+		),
+		actions(
+			mark(M, "Przecinek1")
+		)
+	);
+
+
+
+//przed tym wstawic przecinek
+	apply(
+		match(
+			inter(lex(lower(base[0]), "wyrazy"), ["przed"]),
+			inter(lex(lower(base[0]), "wyrazy"), ["przecinekZPrzedrostkiem"])
+		),
+		actions(
+			mark(M, "Przecinek2")
+		)
+	);
+
+//przed tym wstawic przecinek - spojnik zlozony,
+	apply(
+		match(
+			inter(lex(lower(base[0]), "wyrazy"), ["spojnikZlozony1"]),
+			inter(lex(lower(base[0]), "wyrazy"), ["spojnikZlozony2"])
+		),
+		actions(
+			mark(M, "SpojnikZlozonydsasda")
+		)
+	);
+
+	apply(
+		match(
+			repeat(
+				not(inter(class[0], {praet, fin, interp}))
+			),
+			inter(class[0], {praet, fin})
+		),
+		actions(
+			mark(M, "ZdanieZPrzecinkiem")
+		)
+	);
+
+
+	apply(
+		match(
+			equal(lower(base[0]), "a"),
+			equal(lower(base[0]), "choć")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "a"),
+			equal(lower(base[0]), "gdy")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "a"),
+			equal(lower(base[0]), "kiedy")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "a"),
+			equal(lower(base[0]), "jeśli")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "a"),
+			equal(lower(base[0]), "jeżeli")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "a"),
+			equal(lower(base[0]), "mianowicie")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "a"),
+			equal(lower(base[0]), "następnie")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "a"),
+			equal(lower(base[0]), "ponieważ")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "a"),
+			equal(lower(base[0]), "potem")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "a"),
+			equal(lower(base[0]), "także")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "a"),
+			equal(lower(base[0]), "także"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "a"),
+			equal(lower(base[0]), "to")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "a"),
+			equal(lower(base[0]), "więc")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "a"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "albo"),
+			equal(lower(base[0]), "lepiej")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "albo"),
+			equal(lower(base[0]), "raczej")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "ale"),
+			equal(lower(base[0]), "i")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "ani"),
+			equal(lower(base[0]), "nawet")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "ani"),
+			equal(lower(base[0]), "też")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "chyba"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "chyba"),
+			equal(lower(base[0]), "żeby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "czy"),
+			equal(lower(base[0]), "może")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "dlatego"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "dlatego"),
+			equal(lower(base[0]), "żeby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "dlatego"),
+			equal(lower(base[0]), "abyby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "dopiero"),
+			equal(lower(base[0]), "gdy")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "dopero"),
+			equal(lower(base[0]), "kiedy")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "dopiero"),
+			equal(lower(base[0]), "jak")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "dzięki"),
+			equal(lower(base[0]), "temu")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "dzięki"),
+			equal(lower(base[0]), "temu"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "i"),
+			equal(lower(base[0]), "chociaż")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "i"),
+			equal(lower(base[0]), "choć")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "i"),
+			equal(lower(base[0]), "jednak")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "i"),
+			equal(lower(base[0]), "tak")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "i"),
+			equal(lower(base[0]), "to")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "i"),
+			equal(lower(base[0]), "to"),
+			equal(lower(base[0]), "ile")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "i"),
+			equal(lower(base[0]), "to"),
+			equal(lower(base[0]), "jak")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "i"),
+			equal(lower(base[0]), "to"),
+			equal(lower(base[0]), "tyle")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "i"),
+			equal(lower(base[0]), "to"),
+			equal(lower(base[0]), "gdy")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "i"),
+			equal(lower(base[0]), "to"),
+			equal(lower(base[0]), "kiedy")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "i"),
+			equal(lower(base[0]), "to"),
+			equal(lower(base[0]), "jeśli")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "i"),
+			equal(lower(base[0]), "to"),
+			equal(lower(base[0]), "jeżeli")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "i"),
+			equal(lower(base[0]), "to"),
+			equal(lower(base[0]), "który")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "i"),
+			equal(lower(base[0]), "to"),
+			equal(lower(base[0]), "żeby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "i"),
+			equal(lower(base[0]), "tylko"),
+			equal(lower(base[0]), "tyle")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "i"),
+			equal(lower(base[0]), "tylko"),
+			equal(lower(base[0]), "tak")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "ile"),
+			equal(lower(base[0]), "razy")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "ile"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "innymi"),
+			equal(lower(base[0]), "słowy")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "jak"),
+			equal(lower(base[0]), "gdyby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "jak"),
+			equal(lower(base[0]), "również")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "jak"),
+			equal(lower(base[0]), "też")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "jak"),
+			equal(lower(base[0]), "żeby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "jako"),
+			equal(lower(base[0]), "też")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "jako"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "jak"),
+			equal(lower(base[0]), "zawsze"),
+			equal(lower(base[0]), "gdy")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "który"),
+			equal(lower(base[0]), "jeśli")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "który"),
+			equal(lower(base[0]), "jeżeli")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "lecz"),
+			equal(lower(base[0]), "i")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "lub"),
+			equal(lower(base[0]), "raczej")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "mimo"),
+			equal(lower(base[0]), "to")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "mimo"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "nawet"),
+			equal(lower(base[0]), "jeśli")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "nawet"),
+			equal(lower(base[0]), "jeżeli")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "na"),
+			equal(lower(base[0]), "skutek"),
+			equal(lower(base[0]), "czego")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "na"),
+			equal(lower(base[0]), "skutek"),
+			equal(lower(base[0]), "tego")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "na"),
+			equal(lower(base[0]), "skutek"),
+			equal(lower(base[0]), "tego"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "po"),
+			equal(lower(base[0]), "co")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "po"),
+			equal(lower(base[0]), "czym")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "pod"),
+			equal(lower(base[0]), "warunkiem"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "podczas"),
+			equal(lower(base[0]), "gdy")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "podczas"),
+			equal(lower(base[0]), "kiedy")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "podobnie"),
+			equal(lower(base[0]), "jak")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "pod"),
+			equal(lower(base[0]), "tym"),
+			equal(lower(base[0]), "warunkiem"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "pomimo"),
+			equal(lower(base[0]), "to")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "pomimo"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "potem"),
+			equal(lower(base[0]), "gdy")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "po"),
+			equal(lower(base[0]), "to")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "po"),
+			equal(lower(base[0]), "to"),
+			equal(lower(base[0]), "żeby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "po"),
+			equal(lower(base[0]), "to"),
+			equal(lower(base[0]), "abyby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "przy"),
+			equal(lower(base[0]), "czym")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "skutkiem"),
+			equal(lower(base[0]), "czego")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "szczególnie"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "szczególnie"),
+			equal(lower(base[0]), "żeby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "szczególnie"),
+			equal(lower(base[0]), "abyby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "tak"),
+			equal(lower(base[0]), "jak")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "tak"),
+			equal(lower(base[0]), "jakby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "tak"),
+			equal(lower(base[0]), "skąd")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "tak"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "tak"),
+			equal(lower(base[0]), "żeby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "tak"),
+			equal(lower(base[0]), "abyby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "taki"),
+			equal(lower(base[0]), "sam"),
+			equal(lower(base[0]), "jak")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "tam"),
+			equal(lower(base[0]), "gdzie")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "tam"),
+			equal(lower(base[0]), "skąd")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "ten"),
+			equal(lower(base[0]), "sam"),
+			equal(lower(base[0]), "co")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "teraz"),
+			equal(lower(base[0]), "gdy")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "to"),
+			equal(lower(base[0]), "co")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "to"),
+			equal(lower(base[0]), "jest")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "to"),
+			equal(lower(base[0]), "znaczy")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "to"),
+			equal(lower(base[0]), "znaczy"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "to"),
+			equal(lower(base[0]), "znaczy"),
+			equal(lower(base[0]), "żeby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "to"),
+			equal(lower(base[0]), "znaczy"),
+			equal(lower(base[0]), "abyby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "tyle"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "tylko"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "tylko"),
+			equal(lower(base[0]), "żeby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "tylko"),
+			equal(lower(base[0]), "abyby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "tym"),
+			equal(lower(base[0]), "bardziej"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "tym"),
+			equal(lower(base[0]), "bardziej"),
+			equal(lower(base[0]), "żeby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "tym"),
+			equal(lower(base[0]), "bardziej"),
+			equal(lower(base[0]), "abyby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "w"),
+			equal(lower(base[0]), "przypadku"),
+			equal(lower(base[0]), "gdy")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "w"),
+			equal(lower(base[0]), "przypadku"),
+			equal(lower(base[0]), "kiedy")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "w"),
+			equal(lower(base[0]), "przypadku"),
+			equal(lower(base[0]), "gdyby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "w"),
+			equal(lower(base[0]), "taki"),
+			equal(lower(base[0]), "sposób"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "w"),
+			equal(lower(base[0]), "taki"),
+			equal(lower(base[0]), "sposób"),
+			equal(lower(base[0]), "żeby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "w"),
+			equal(lower(base[0]), "taki"),
+			equal(lower(base[0]), "sposób"),
+			equal(lower(base[0]), "abyby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "w"),
+			equal(lower(base[0]), "tym"),
+			equal(lower(base[0]), "celu"),
+			equal(lower(base[0]), "żeby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "w"),
+			equal(lower(base[0]), "tym"),
+			equal(lower(base[0]), "celu"),
+			equal(lower(base[0]), "abyby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "w"),
+			equal(lower(base[0]), "miarę"),
+			equal(lower(base[0]), "jak")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "w"),
+			equal(lower(base[0]), "razie"),
+			equal(lower(base[0]), "gdyby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "w"),
+			equal(lower(base[0]), "wypadku"),
+			equal(lower(base[0]), "gdy")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "w"),
+			equal(lower(base[0]), "wypadku"),
+			equal(lower(base[0]), "kiedy")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "w"),
+			equal(lower(base[0]), "wypadku"),
+			equal(lower(base[0]), "gdyby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "właśnie"),
+			equal(lower(base[0]), "gdy")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "właśnie"),
+			equal(lower(base[0]), "kiedy")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "właśnie"),
+			equal(lower(base[0]), "jak")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "wobec"),
+			equal(lower(base[0]), "czego")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "wobec"),
+			equal(lower(base[0]), "tego")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "wobec"),
+			equal(lower(base[0]), "tego"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "wprzód"),
+			equal(lower(base[0]), "nim")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "w"),
+			equal(lower(base[0]), "przypadku"),
+			equal(lower(base[0]), "gdy")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "wskutek"),
+			equal(lower(base[0]), "tego")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "wskutek"),
+			equal(lower(base[0]), "tego"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "wtedy"),
+			equal(lower(base[0]), "gdy")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "w"),
+			equal(lower(base[0]), "ten"),
+			equal(lower(base[0]), "sposób")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "w"),
+			equal(lower(base[0]), "ten"),
+			equal(lower(base[0]), "sposób"),
+			equal(lower(base[0]), "żeby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "w"),
+			equal(lower(base[0]), "ten"),
+			equal(lower(base[0]), "sposób"),
+			equal(lower(base[0]), "abyby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "w"),
+			equal(lower(base[0]), "tym"),
+			equal(lower(base[0]), "celu")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "w"),
+			equal(lower(base[0]), "tym"),
+			equal(lower(base[0]), "celu"),
+			equal(lower(base[0]), "żeby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "w"),
+			equal(lower(base[0]), "tym"),
+			equal(lower(base[0]), "celu"),
+			equal(lower(base[0]), "abyby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "w"),
+			equal(lower(base[0]), "wyniku"),
+			equal(lower(base[0]), "tego")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "w"),
+			equal(lower(base[0]), "wyniku"),
+			equal(lower(base[0]), "tego"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "w"),
+			equal(lower(base[0]), "związku"),
+			equal(lower(base[0]), "z"),
+			equal(lower(base[0]), "tym")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "w"),
+			equal(lower(base[0]), "związku"),
+			equal(lower(base[0]), "z"),
+			equal(lower(base[0]), "tym"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "z"),
+			equal(lower(base[0]), "chwilą"),
+			equal(lower(base[0]), "gdy")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "z"),
+			equal(lower(base[0]), "tą"),
+			equal(lower(base[0]), "myślą"),
+			equal(lower(base[0]), "żeby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "z"),
+			equal(lower(base[0]), "tą"),
+			equal(lower(base[0]), "myślą"),
+			equal(lower(base[0]), "abyby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "z"),
+			equal(lower(base[0]), "tego"),
+			equal(lower(base[0]), "powodu")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "z"),
+			equal(lower(base[0]), "tego"),
+			equal(lower(base[0]), "powodu"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "z"),
+			equal(lower(base[0]), "tej"),
+			equal(lower(base[0]), "przyczyny"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "z"),
+			equal(lower(base[0]), "tym"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "z"),
+			equal(lower(base[0]), "tym"),
+			equal(lower(base[0]), "zastrzeżeniem"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "zwłaszcza"),
+			equal(lower(base[0]), "gdy")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "zwłaszcza"),
+			equal(lower(base[0]), "kiedy")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "zwłaszcza"),
+			equal(lower(base[0]), "jeśli")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "zwłaszcza"),
+			equal(lower(base[0]), "jeżeli")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "zwłaszcza"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "z"),
+			equal(lower(base[0]), "zastrzeżeniem"),
+			equal(lower(base[0]), "że")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "że"),
+			equal(lower(base[0]), "aby")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "że"),
+			equal(lower(base[0]), "aż")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "że"),
+			equal(lower(base[0]), "gdy")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "że"),
+			equal(lower(base[0]), "kiedy")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "że"),
+			equal(lower(base[0]), "jeśli")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	);
+apply(
+		match(
+			equal(lower(base[0]), "że"),
+			equal(lower(base[0]), "jeżeli")
+		),
+		actions(
+			mark(M, "SpojnikZlozony")
+		)
+	)
+)
+
+
+

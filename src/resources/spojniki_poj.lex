@@ -1,0 +1,2 @@
+że	spojnik
+bo	spojnik

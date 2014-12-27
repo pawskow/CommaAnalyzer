@@ -1,0 +1,77 @@
+import("spojniki_poj.lex", "spoj_poj")
+import("wyrazy.lex", "wyrazy")
+
+match_rules(
+
+	apply(
+		match(
+			repeat(
+				not(inter(class[0], {praet, fin}))
+			),
+			optional(inter(class[0], {praet, fin}))
+		),
+		actions(
+			mark(M, "Podzdanie")
+		)
+	);
+
+
+
+//wolacz na poczatku zdania - przecinek po ostatnim
+    apply(
+		match(
+			inter(
+				if(llook(0, begin, $P,
+ 					in({voc}, cas[$P])
+ 				),
+ 				gnd[$P]
+			), gnd[0])
+
+		),
+		actions(
+			mark(M, "Wolacz")
+		)
+	);
+
+
+
+//przed tym wstawic przecinek
+	apply(
+		match(
+			optional(inter(lex(lower(base[0]), "wyrazy"), ["przed"])),
+			inter(lex(lower(base[0]), "wyrazy"), ["przecinek"])
+		),
+		actions(
+			mark(M, "Przecinek1")
+		)
+	);
+
+
+
+//przed tym wstawic przecinek
+	apply(
+		match(
+			inter(lex(lower(base[0]), "wyrazy"), ["przed"]),
+			inter(lex(lower(base[0]), "wyrazy"), ["przecinekZPrzedrostkiem"])
+		),
+		actions(
+			mark(M, "Przecinek2")
+		)
+	);
+
+	apply(
+		match(
+		    and(
+		        not(isannpart(0, "SpojnikZlozony")),
+		        inter(lex(lower(base[0]), "spoj_poj"), ["spojnik"])
+		        )
+		),
+		actions(
+			mark(M, "Spojnik")
+		)
+	)
+
+)
+
+
+
