@@ -8,7 +8,7 @@ PRINT_ANNOTATED_FILE = True
 __CURR_DIR__ = os.path.dirname(os.path.abspath(__file__))
 RULES_DIR = os.path.join(__CURR_DIR__, "rules")
 __WCCL_FILES = []
-__WCCL_IN_ORDER = ['SpojnikZlozony.txt', 'rules.ccl']
+__WCCL_IN_ORDER = ['SpojnikZlozony.txt', 'rules.ccl', 'wolaczReguly.ccl']
 
 RULE_PARTS = [
 """match_rules(

@@ -26,5 +26,5 @@ def run_rules_on_file(rules_file, input_file):
 
 if __name__ == "__main__":
     input_file = "resources/input.txt"
-    rules_file = "resources/main_rules.ccl"
+    rules_file = "comma_analyzer/rules/wolaczReguly.ccl"
     run_rules_on_file(rules_file, input_file)
