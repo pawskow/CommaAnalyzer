@@ -1,0 +1,67 @@
+match_rules(
+apply(
+        match(
+            equal(lower(base[0]), "co"),
+            equal(lower(base[0]), "więcej")
+        ),
+        actions(
+            mark(M, "Wydzielenie")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "co"),
+            equal(lower(base[0]), "gorsza")
+        ),
+        actions(
+            mark(M, "Wydzielenie")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "innymi"),
+            equal(lower(base[0]), "słowy")
+        ),
+        actions(
+            mark(M, "Wydzielenie")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "nawiasem"),
+            equal(lower(base[0]), "mówiąc")
+        ),
+        actions(
+            mark(M, "Wydzielenie")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "tak"),
+            equal(lower(base[0]), "czy"),
+            equal(lower(base[0]), "owak")
+        ),
+        actions(
+            mark(M, "Wydzielenie")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "tak"),
+            equal(lower(base[0]), "czy"),
+            equal(lower(base[0]), "siak")
+        ),
+        actions(
+            mark(M, "Wydzielenie")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "tak"),
+            equal(lower(base[0]), "czy"),
+            equal(lower(base[0]), "inaczej")
+        ),
+        actions(
+            mark(M, "Wydzielenie")
+        )
+    ))

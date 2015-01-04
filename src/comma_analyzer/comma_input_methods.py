@@ -47,7 +47,7 @@ def spojnik_zlozony(asentence, result):
 
 def zwykly_spojnik(asentence, result):
     #wstawia spojniki proste
-    channel_name = "Spojnik"
+    channel_name = "SpojnikPojedynczy"
     if not channel_name in asentence.all_channels():
         return
     chan = asentence.get_channel(channel_name)
@@ -56,8 +56,57 @@ def zwykly_spojnik(asentence, result):
         first_indice = ann.indices[0]
         if first_indice<1:
             continue #poczatek zdania
-        result.add_sure_comma(first_indice-1, channel_name)
 
+        zloz = "SpojnikZlozony"
+        if zloz not in asentence.all_channels():
+             result.add_sure_comma(first_indice-1, channel_name)
+        else:
+              chan = asentence.get_channel(zloz)
+              ann_vec = chan.make_annotation_vector()
+              for ann in ann_vec:
+                    ann_lenZ = len(ann.indices)
+                    first = ann.indices[0]
+                    if(first-1<first_indice and (first+ann_lenZ)>first_indice):#jezeli spojnik pojedynczy jest czescia któregos ze zlozonych to olac
+                        break
+                    else:
+                         if(_check_token_belong_to_any(asentence.tokens()[first_indice-1],"interp")):
+                            return
+                         else:
+                            result.add_sure_comma(first_indice-1, channel_name)
+
+
+
+
+def wydzielenie(asentence, result):
+    #szuka typowych wyrażeń, które zwyczajowo są wydzielone przecinkami czyli przed i po wyrazeniu wstawiam
+    channel_name = "Wydzielenie"
+    if not channel_name in asentence.all_channels():
+        return
+    chan = asentence.get_channel(channel_name)
+    ann_vec = chan.make_annotation_vector()
+    count=1
+    for ann in ann_vec:
+        first_indice = ann.indices[0]
+        ann_len = len(ann.indices)
+        result.add_sure_comma(first_indice-1+ann_len, channel_name)
+        if first_indice<1:
+            continue #poczatek zdania
+    result.add_sure_comma(first_indice-1, channel_name)
+
+def wyrazenie_srodek(asentence, result):
+    #szuka typowych wyrażeń dwuwyrazowych które rozdzielone są przecinkiem
+    channel_name = "WyrazenieSrodek"
+    if not channel_name in asentence.all_channels():
+        return
+    chan = asentence.get_channel(channel_name)
+    ann_vec = chan.make_annotation_vector()
+
+    for ann in ann_vec:
+        first_indice = ann.indices[0]
+        if first_indice<1:
+            continue #poczatek zdania
+
+    result.add_sure_comma(first_indice, channel_name)
 
 
 def wolacz_na_poczatku_zdania(asentence, result):

@@ -32,6 +32,8 @@ dzięki temu że
 i chociaż
 i choć
 i jednak
+i kwita
+i koniec
 i tak
 i to
 i to ile
@@ -49,6 +51,7 @@ ile razy
 ile że
 innymi słowy
 jak gdyby
+jak i
 jak również
 jak też
 jak żeby

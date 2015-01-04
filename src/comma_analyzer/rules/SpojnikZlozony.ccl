@@ -310,6 +310,24 @@ apply(
 apply(
         match(
             equal(lower(base[0]), "i"),
+            equal(lower(base[0]), "kwita")
+        ),
+        actions(
+            mark(M, "SpojnikZlozony")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "i"),
+            equal(lower(base[0]), "koniec")
+        ),
+        actions(
+            mark(M, "SpojnikZlozony")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "i"),
             equal(lower(base[0]), "tak")
         ),
         actions(
@@ -466,6 +484,15 @@ apply(
         match(
             equal(lower(base[0]), "jak"),
             equal(lower(base[0]), "gdyby")
+        ),
+        actions(
+            mark(M, "SpojnikZlozony")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "jak"),
+            equal(lower(base[0]), "i")
         ),
         actions(
             mark(M, "SpojnikZlozony")

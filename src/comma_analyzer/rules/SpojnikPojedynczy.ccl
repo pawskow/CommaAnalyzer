@@ -1,0 +1,257 @@
+match_rules(
+apply(
+        match(
+            equal(lower(base[0]), "aby")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "ale")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "bo")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "bowiem")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "chociaż")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "choć")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "gdyż")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "jednak")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "jeśli")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "jeżeli")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "lecz")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "natomiast")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "ponieważ")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "żeby")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "toteż")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "dopóty")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "dlaczego")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "zanim")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "póki")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "czyj")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "gdy")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "kiedy")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "gdyby")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "który")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "jaki")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "zamiast")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "ażeby")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "iżby")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "że")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "iż")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "jak")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "czyli")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    ))
