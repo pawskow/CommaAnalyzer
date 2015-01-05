@@ -94,14 +94,13 @@ def wydzielenie(asentence, result):
     result.add_sure_comma(first_indice-1, channel_name)
 
 def orzeczenia(asentence, result):
-    #szuka typowych wyrażeń, które zwyczajowo są wydzielone przecinkami czyli przed i po wyrazeniu wstawiam
-    channel_name = "Orzeczenie"      #próbuje znalezc dwa orzeczenia i jezeli nie ma spojnika badz przecinka pomiedzy nimi to trzeba cos zrobic
+    #próbuje znalezc dwa orzeczenia i jezeli nie ma spojnika badz przecinka pomiedzy nimi to trzeba cos zrobic
+    channel_name = "Orzeczenie"
     if not channel_name in asentence.all_channels():
         return
     chan = asentence.get_channel(channel_name)
     ann_vec = chan.make_annotation_vector()
     numberVerb = len(ann_vec)
-    print numberVerb
     if numberVerb>=2:
        idx=0
        while idx<(numberVerb-1):
@@ -112,7 +111,6 @@ def orzeczenia(asentence, result):
             first+=1
             if (_check_token_belong_to_any(asentence.tokens()[first], ['inetrp','conj'])):
                putOrNot = False
-
 
           if(putOrNot):
              result.add_sure_comma(second-2, channel_name)

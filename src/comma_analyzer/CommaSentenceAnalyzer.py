@@ -19,7 +19,7 @@ COMMA_INPUT_METHODS = [
                         comma_input_methods.wyrazenie_srodek,
                         comma_input_methods.wolacz_na_poczatku_zdania,
                        #comma_input_methods.dwa_podobne_skladniki
-                    comma_input_methods.orzeczenia
+                        comma_input_methods.orzeczenia
                     ]
 
 class CommaSentenceAnalyzer(object):
