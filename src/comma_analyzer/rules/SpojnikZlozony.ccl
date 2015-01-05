@@ -395,6 +395,15 @@ apply(
     );
 apply(
         match(
+            equal(lower(base[0]), "na"),
+            equal(lower(base[0]), "który")
+        ),
+        actions(
+            mark(M, "SpojnikZlozony")
+        )
+    );
+apply(
+        match(
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "jeśli")

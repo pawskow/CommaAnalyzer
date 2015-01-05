@@ -33,7 +33,15 @@ match_rules(
 		)
 	);
 
+	  apply(
+        match(
+            inter(class[-1], {praet, fin, impt, pcon})
 
+        ),
+        actions(
+            mark(M, "Orzeczenie")
+        )
+    );
 
 //przed tym wstawic przecinek
 	apply(

@@ -93,6 +93,35 @@ def wydzielenie(asentence, result):
             continue #poczatek zdania
     result.add_sure_comma(first_indice-1, channel_name)
 
+def orzeczenia(asentence, result):
+    #szuka typowych wyrażeń, które zwyczajowo są wydzielone przecinkami czyli przed i po wyrazeniu wstawiam
+    channel_name = "Orzeczenie"      #próbuje znalezc dwa orzeczenia i jezeli nie ma spojnika badz przecinka pomiedzy nimi to trzeba cos zrobic
+    if not channel_name in asentence.all_channels():
+        return
+    chan = asentence.get_channel(channel_name)
+    ann_vec = chan.make_annotation_vector()
+    numberVerb = len(ann_vec)
+    print numberVerb
+    if numberVerb>=2:
+       idx=0
+       while idx<(numberVerb-1):
+          first = ann_vec[idx].indices[0]
+          second= ann_vec[idx+1].indices[0]
+          putOrNot = True
+          while first<second:
+            first+=1
+            if (_check_token_belong_to_any(asentence.tokens()[first], ['inetrp','conj'])):
+               putOrNot = False
+
+
+          if(putOrNot):
+             result.add_sure_comma(second-2, channel_name)
+          idx+=1
+
+
+
+
+
 def wyrazenie_srodek(asentence, result):
     #szuka typowych wyrażeń dwuwyrazowych które rozdzielone są przecinkiem
     channel_name = "WyrazenieSrodek"
@@ -107,6 +136,17 @@ def wyrazenie_srodek(asentence, result):
             continue #poczatek zdania
 
     result.add_sure_comma(first_indice, channel_name)
+
+def dwa_podobne_skladniki(asentence, result): #prosta metoda na powtórzenia
+  index=1
+  tokens = len(asentence.tokens())
+  while index<tokens:
+      class1 = _get_token_all_classes(asentence.tokens()[index-1])
+      class2 = _get_token_all_classes(asentence.tokens()[index])
+      if(class1==class2):
+          print index
+          result.add_sure_comma(index-1, "DwiePodobneCzęściMowy")
+      index+=1
 
 
 def wolacz_na_poczatku_zdania(asentence, result):

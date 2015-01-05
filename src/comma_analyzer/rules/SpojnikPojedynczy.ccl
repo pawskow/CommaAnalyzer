@@ -254,4 +254,28 @@ apply(
         actions(
             mark(M, "SpojnikPojedynczy")
         )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "by")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "więc")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            equal(lower(base[0]), "mianowicie")
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
     ))
