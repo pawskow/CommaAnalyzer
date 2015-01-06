@@ -18,13 +18,14 @@ class CommaResult(object):
         self.__commas.append((idx, prob, comment))
 
     def get_sure_commas(self):
-        return self.get_commas_with_prob(1.)
+        return set(self.get_commas_with_prob(1.))
 
     def get_commas_with_prob(self, given_prob):
-        commas = set()
+        commas = {}
         for idx, prob, comment in self.__commas:
             if prob>=given_prob:
-                commas.add(idx)
+                if commas.get(idx, 0.) < prob:
+                    commas[idx] = prob
         return commas
 
     def optimise_probabilities(self):

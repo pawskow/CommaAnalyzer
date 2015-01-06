@@ -56,8 +56,8 @@ def zwykly_spojnik(asentence, result):
     previous_end_index = -1 #wskazuje na koniec poprzedniego spojnika prostego. Potrzebne dla np.: bo kiedy
     for ann in ann_vec:
         first_indice = ann.indices[0]
-        print asentence.tokens()[first_indice].orth_utf8()
-        if previous_end_index>=first_indice-1 or not asentence.tokens()[first_indice].after_space() or result.sure_not_comma(first_indice):
+        if previous_end_index>=first_indice-1 or not asentence.tokens()[first_indice].after_space() or result.sure_not_comma(first_indice-1):
+            previous_end_index = ann.indices[-1]
             continue #poczatek zdania, nie ma spacji ("moglby"), juz byl wczesniej spojnik
         previous_end_index = ann.indices[-1]
         zloz = "SpojnikZlozony"
@@ -99,7 +99,7 @@ def orzeczenia(asentence, result):
     channel_name = "Orzeczenie"
     if not channel_name in asentence.all_channels():
         return
-    sure_commas = result.get_commas_with_prob(0.5)
+    commas_with_prob = result.get_commas_with_prob(0.5)
     chan = asentence.get_channel(channel_name)
     ann_vec = chan.make_annotation_vector()
     numberVerb = len(ann_vec)
@@ -108,13 +108,23 @@ def orzeczenia(asentence, result):
        while idx<(numberVerb-1):
           first = ann_vec[idx].indices[0]
           second= ann_vec[idx+1].indices[0]
-          putOrNot = True
-          while first<second and putOrNot:
-            if (_check_token_belong_to_any(asentence.tokens()[first], ['interp','conj'])) or first in sure_commas:
-              putOrNot = False
+          no_need_of_comma = False
+          best_pos = None
+          best_prob = 0.
+          while first<second and not no_need_of_comma:
+            if (_check_token_belong_to_any(asentence.tokens()[first], ['interp','conj'])):
+                no_need_of_comma = True
+                break #rozdzielony przecinkiem lub spojnikiem
+            #jesli jakies sa, to znajdz nejlepiej pasujacy przecinek
+            if first in commas_with_prob and commas_with_prob[first]>best_prob:
+                best_prob = commas_with_prob[first]
+                best_pos = first
             first+=1
-          if putOrNot:
-             result.add_sure_comma(second-1, channel_name)
+          if not no_need_of_comma:
+              if best_pos==None:
+                 result.add_sure_comma(second-1, channel_name)
+              else:
+                 result.add_sure_comma(best_pos, channel_name)
           idx+=1
 
 
@@ -200,3 +210,13 @@ def wolacz_na_poczatku_zdania(asentence, result):
                 break
         last_index+=1
     result.add_sure_comma(place_to_put, channel_name)
+
+def mozliwy_rozdzielacz(asentence, result):
+    channel_name = "Rozdzielacz"
+    if not asentence.has_channel(channel_name):
+        return
+    chan = asentence.get_channel(channel_name)
+    ann_vec = chan.make_annotation_vector()
+    for ann in ann_vec:
+        first_index = ann.indices[0]
+        result.add_comma(first_index-1, 0.6, "Rozdzielacz")

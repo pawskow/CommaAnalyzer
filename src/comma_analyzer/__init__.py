@@ -2,13 +2,13 @@
 # -*- coding: utf-8 -*-
 import os
 
-DEBUG = True
-PRINT_ANNOTATED_FILE = True
+DEBUG = False
+PRINT_ANNOTATED_FILE = False
 
 __CURR_DIR__ = os.path.dirname(os.path.abspath(__file__))
 RULES_DIR = os.path.join(__CURR_DIR__, "rules")
 __WCCL_FILES = []
-__WCCL_IN_ORDER = ['BezPrzecinkaPo.txt','SpojnikZlozony.txt','Wydzielenie.txt','WyrazenieSrodek.txt', 'SpojnikPojedynczy.txt' ,'rules.ccl', 'wolaczReguly.ccl',]
+__WCCL_IN_ORDER = ['BezPrzecinkaPo.txt','Rozdzielacz.txt','SpojnikZlozony.txt','Wydzielenie.txt','WyrazenieSrodek.txt', 'SpojnikPojedynczy.txt' ,'rules.ccl', 'wolaczReguly.ccl',]
 
 RULE_PARTS = [
 """match_rules(

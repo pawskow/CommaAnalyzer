@@ -33,6 +33,14 @@ class CommaAnalyzer(object):
             res = self.__sentence_analyzer.do(sent)
             yield res
 
+    def raw_sentences(self):
+        while True:
+            sent = self.__reader.get_next_sentence()
+            if not sent:
+                break # end of input
+            res = self.__sentence_analyzer.get_string_sentence(sent)
+            yield res
+
     def get_tagged_file_path(self, file_path):
         os_handle = mkstemp()
         full_tag_cmd = TAG_COMMAND %(file_path, os_handle[1])

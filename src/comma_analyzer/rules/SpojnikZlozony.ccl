@@ -1,6 +1,7 @@
 match_rules(
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "choć")
         ),
@@ -10,6 +11,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "gdy")
         ),
@@ -19,6 +21,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "kiedy")
         ),
@@ -28,6 +31,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "jeśli")
         ),
@@ -37,6 +41,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "jeżeli")
         ),
@@ -46,6 +51,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "mianowicie")
         ),
@@ -55,6 +61,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "następnie")
         ),
@@ -64,6 +71,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "nie")
         ),
@@ -73,6 +81,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "ponieważ")
         ),
@@ -82,6 +91,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "potem")
         ),
@@ -91,6 +101,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "także")
         ),
@@ -100,6 +111,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "także"),
             equal(lower(base[0]), "że")
@@ -110,6 +122,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "to")
         ),
@@ -119,6 +132,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "więc")
         ),
@@ -128,6 +142,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "że")
         ),
@@ -137,6 +152,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "albo"),
             equal(lower(base[0]), "lepiej")
         ),
@@ -146,6 +162,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "albo"),
             equal(lower(base[0]), "raczej")
         ),
@@ -155,6 +172,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "ale"),
             equal(lower(base[0]), "i")
         ),
@@ -164,6 +182,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "ani"),
             equal(lower(base[0]), "nawet")
         ),
@@ -173,6 +192,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "ani"),
             equal(lower(base[0]), "też")
         ),
@@ -182,6 +202,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "chyba"),
             equal(lower(base[0]), "że")
         ),
@@ -191,6 +212,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "chyba"),
             equal(lower(base[0]), "żeby")
         ),
@@ -200,6 +222,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "czy"),
             equal(lower(base[0]), "może")
         ),
@@ -209,6 +232,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "dlatego"),
             equal(lower(base[0]), "że")
         ),
@@ -218,6 +242,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "dlatego"),
             equal(lower(base[0]), "żeby")
         ),
@@ -227,6 +252,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "dlatego"),
             equal(lower(base[0]), "abyby")
         ),
@@ -236,6 +262,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "dopiero"),
             equal(lower(base[0]), "gdy")
         ),
@@ -245,6 +272,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "dopero"),
             equal(lower(base[0]), "kiedy")
         ),
@@ -254,6 +282,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "dopiero"),
             equal(lower(base[0]), "jak")
         ),
@@ -263,6 +292,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "dzięki"),
             equal(lower(base[0]), "temu")
         ),
@@ -272,6 +302,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "dzięki"),
             equal(lower(base[0]), "temu"),
             equal(lower(base[0]), "że")
@@ -282,6 +313,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "chociaż")
         ),
@@ -291,6 +323,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "choć")
         ),
@@ -300,6 +333,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "jednak")
         ),
@@ -309,6 +343,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "kwita")
         ),
@@ -318,6 +353,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "koniec")
         ),
@@ -327,6 +363,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "tak")
         ),
@@ -336,6 +373,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "to")
         ),
@@ -345,6 +383,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "ile")
@@ -355,6 +394,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "jak")
@@ -365,6 +405,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "tyle")
@@ -375,6 +416,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "gdy")
@@ -385,6 +427,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "kiedy")
@@ -395,6 +438,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "na"),
             equal(lower(base[0]), "który")
         ),
@@ -404,6 +448,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "jeśli")
@@ -414,6 +459,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "jeżeli")
@@ -424,6 +470,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "który")
@@ -434,6 +481,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "żeby")
@@ -444,6 +492,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "tylko"),
             equal(lower(base[0]), "tyle")
@@ -454,6 +503,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "tylko"),
             equal(lower(base[0]), "tak")
@@ -464,6 +514,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "ile"),
             equal(lower(base[0]), "razy")
         ),
@@ -473,6 +524,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "ile"),
             equal(lower(base[0]), "że")
         ),
@@ -482,6 +534,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "innymi"),
             equal(lower(base[0]), "słowy")
         ),
@@ -491,6 +544,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "jak"),
             equal(lower(base[0]), "gdyby")
         ),
@@ -500,6 +554,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "jak"),
             equal(lower(base[0]), "i")
         ),
@@ -509,6 +564,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "jak"),
             equal(lower(base[0]), "również")
         ),
@@ -518,6 +574,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "jak"),
             equal(lower(base[0]), "też")
         ),
@@ -527,6 +584,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "jak"),
             equal(lower(base[0]), "żeby")
         ),
@@ -536,6 +594,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "jako"),
             equal(lower(base[0]), "też")
         ),
@@ -545,6 +604,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "jako"),
             equal(lower(base[0]), "że")
         ),
@@ -554,6 +614,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "jak"),
             equal(lower(base[0]), "zawsze"),
             equal(lower(base[0]), "gdy")
@@ -564,6 +625,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "który"),
             equal(lower(base[0]), "jeśli")
         ),
@@ -573,6 +635,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "który"),
             equal(lower(base[0]), "jeżeli")
         ),
@@ -582,6 +645,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "lecz"),
             equal(lower(base[0]), "i")
         ),
@@ -591,6 +655,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "lub"),
             equal(lower(base[0]), "raczej")
         ),
@@ -600,6 +665,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "mimo"),
             equal(lower(base[0]), "to")
         ),
@@ -609,6 +675,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "mimo"),
             equal(lower(base[0]), "że")
         ),
@@ -618,6 +685,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "nawet"),
             equal(lower(base[0]), "jeśli")
         ),
@@ -627,6 +695,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "nawet"),
             equal(lower(base[0]), "jeżeli")
         ),
@@ -636,6 +705,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "na"),
             equal(lower(base[0]), "skutek"),
             equal(lower(base[0]), "czego")
@@ -646,6 +716,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "na"),
             equal(lower(base[0]), "skutek"),
             equal(lower(base[0]), "tego")
@@ -656,6 +727,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "na"),
             equal(lower(base[0]), "skutek"),
             equal(lower(base[0]), "tego"),
@@ -667,6 +739,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "po"),
             equal(lower(base[0]), "co")
         ),
@@ -676,6 +749,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "po"),
             equal(lower(base[0]), "czym")
         ),
@@ -685,6 +759,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "pod"),
             equal(lower(base[0]), "warunkiem"),
             equal(lower(base[0]), "że")
@@ -695,6 +770,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "podczas"),
             equal(lower(base[0]), "gdy")
         ),
@@ -704,6 +780,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "podczas"),
             equal(lower(base[0]), "kiedy")
         ),
@@ -713,6 +790,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "podobnie"),
             equal(lower(base[0]), "jak")
         ),
@@ -722,6 +800,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "pod"),
             equal(lower(base[0]), "tym"),
             equal(lower(base[0]), "warunkiem"),
@@ -733,6 +812,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "pomimo"),
             equal(lower(base[0]), "to")
         ),
@@ -742,6 +822,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "pomimo"),
             equal(lower(base[0]), "że")
         ),
@@ -751,6 +832,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "potem"),
             equal(lower(base[0]), "gdy")
         ),
@@ -760,6 +842,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "po"),
             equal(lower(base[0]), "to")
         ),
@@ -769,6 +852,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "po"),
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "żeby")
@@ -779,6 +863,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "po"),
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "abyby")
@@ -789,6 +874,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "przy"),
             equal(lower(base[0]), "czym")
         ),
@@ -798,6 +884,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "skutkiem"),
             equal(lower(base[0]), "czego")
         ),
@@ -807,6 +894,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "szczególnie"),
             equal(lower(base[0]), "że")
         ),
@@ -816,6 +904,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "szczególnie"),
             equal(lower(base[0]), "żeby")
         ),
@@ -825,6 +914,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "szczególnie"),
             equal(lower(base[0]), "abyby")
         ),
@@ -834,6 +924,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "tak"),
             equal(lower(base[0]), "jak")
         ),
@@ -843,6 +934,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "tak"),
             equal(lower(base[0]), "jakby")
         ),
@@ -852,6 +944,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "tak"),
             equal(lower(base[0]), "skąd")
         ),
@@ -861,6 +954,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "tak"),
             equal(lower(base[0]), "że")
         ),
@@ -870,6 +964,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "tak"),
             equal(lower(base[0]), "żeby")
         ),
@@ -879,6 +974,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "tak"),
             equal(lower(base[0]), "abyby")
         ),
@@ -888,6 +984,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "taki"),
             equal(lower(base[0]), "sam"),
             equal(lower(base[0]), "jak")
@@ -898,6 +995,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "tam"),
             equal(lower(base[0]), "gdzie")
         ),
@@ -907,6 +1005,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "tam"),
             equal(lower(base[0]), "skąd")
         ),
@@ -916,6 +1015,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "ten"),
             equal(lower(base[0]), "sam"),
             equal(lower(base[0]), "co")
@@ -926,6 +1026,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "teraz"),
             equal(lower(base[0]), "gdy")
         ),
@@ -935,6 +1036,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "co")
         ),
@@ -944,6 +1046,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "jest")
         ),
@@ -953,6 +1056,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "znaczy")
         ),
@@ -962,6 +1066,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "znaczy"),
             equal(lower(base[0]), "że")
@@ -972,6 +1077,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "znaczy"),
             equal(lower(base[0]), "żeby")
@@ -982,6 +1088,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "znaczy"),
             equal(lower(base[0]), "abyby")
@@ -992,6 +1099,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "tyle"),
             equal(lower(base[0]), "że")
         ),
@@ -1001,6 +1109,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "tylko"),
             equal(lower(base[0]), "że")
         ),
@@ -1010,6 +1119,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "tylko"),
             equal(lower(base[0]), "żeby")
         ),
@@ -1019,6 +1129,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "tylko"),
             equal(lower(base[0]), "abyby")
         ),
@@ -1028,6 +1139,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "tym"),
             equal(lower(base[0]), "bardziej"),
             equal(lower(base[0]), "że")
@@ -1038,6 +1150,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "tym"),
             equal(lower(base[0]), "bardziej"),
             equal(lower(base[0]), "żeby")
@@ -1048,6 +1161,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "tym"),
             equal(lower(base[0]), "bardziej"),
             equal(lower(base[0]), "abyby")
@@ -1058,6 +1172,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "przypadku"),
             equal(lower(base[0]), "gdy")
@@ -1068,6 +1183,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "przypadku"),
             equal(lower(base[0]), "kiedy")
@@ -1078,6 +1194,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "przypadku"),
             equal(lower(base[0]), "gdyby")
@@ -1088,6 +1205,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "taki"),
             equal(lower(base[0]), "sposób"),
@@ -1099,6 +1217,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "taki"),
             equal(lower(base[0]), "sposób"),
@@ -1110,6 +1229,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "taki"),
             equal(lower(base[0]), "sposób"),
@@ -1121,6 +1241,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "tym"),
             equal(lower(base[0]), "celu"),
@@ -1132,6 +1253,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "tym"),
             equal(lower(base[0]), "celu"),
@@ -1143,6 +1265,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "miarę"),
             equal(lower(base[0]), "jak")
@@ -1153,6 +1276,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "razie"),
             equal(lower(base[0]), "gdyby")
@@ -1163,6 +1287,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "wypadku"),
             equal(lower(base[0]), "gdy")
@@ -1173,6 +1298,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "wypadku"),
             equal(lower(base[0]), "kiedy")
@@ -1183,6 +1309,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "wypadku"),
             equal(lower(base[0]), "gdyby")
@@ -1193,6 +1320,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "właśnie"),
             equal(lower(base[0]), "gdy")
         ),
@@ -1202,6 +1330,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "właśnie"),
             equal(lower(base[0]), "kiedy")
         ),
@@ -1211,6 +1340,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "właśnie"),
             equal(lower(base[0]), "jak")
         ),
@@ -1220,6 +1350,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "wobec"),
             equal(lower(base[0]), "czego")
         ),
@@ -1229,6 +1360,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "wobec"),
             equal(lower(base[0]), "tego")
         ),
@@ -1238,6 +1370,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "wobec"),
             equal(lower(base[0]), "tego"),
             equal(lower(base[0]), "że")
@@ -1248,6 +1381,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "wprzód"),
             equal(lower(base[0]), "nim")
         ),
@@ -1257,6 +1391,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "przypadku"),
             equal(lower(base[0]), "gdy")
@@ -1267,6 +1402,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "wskutek"),
             equal(lower(base[0]), "tego")
         ),
@@ -1276,6 +1412,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "wskutek"),
             equal(lower(base[0]), "tego"),
             equal(lower(base[0]), "że")
@@ -1286,6 +1423,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "wtedy"),
             equal(lower(base[0]), "gdy")
         ),
@@ -1295,6 +1433,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "ten"),
             equal(lower(base[0]), "sposób")
@@ -1305,6 +1444,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "ten"),
             equal(lower(base[0]), "sposób"),
@@ -1316,6 +1456,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "ten"),
             equal(lower(base[0]), "sposób"),
@@ -1327,6 +1468,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "tym"),
             equal(lower(base[0]), "celu")
@@ -1337,6 +1479,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "tym"),
             equal(lower(base[0]), "celu"),
@@ -1348,6 +1491,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "tym"),
             equal(lower(base[0]), "celu"),
@@ -1359,6 +1503,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "wyniku"),
             equal(lower(base[0]), "tego")
@@ -1369,6 +1514,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "wyniku"),
             equal(lower(base[0]), "tego"),
@@ -1380,6 +1526,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "związku"),
             equal(lower(base[0]), "z"),
@@ -1391,6 +1538,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "związku"),
             equal(lower(base[0]), "z"),
@@ -1403,6 +1551,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "z"),
             equal(lower(base[0]), "chwilą"),
             equal(lower(base[0]), "gdy")
@@ -1413,6 +1562,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "z"),
             equal(lower(base[0]), "tą"),
             equal(lower(base[0]), "myślą"),
@@ -1424,6 +1574,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "z"),
             equal(lower(base[0]), "tą"),
             equal(lower(base[0]), "myślą"),
@@ -1435,6 +1586,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "z"),
             equal(lower(base[0]), "tego"),
             equal(lower(base[0]), "powodu")
@@ -1445,6 +1597,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "z"),
             equal(lower(base[0]), "tego"),
             equal(lower(base[0]), "powodu"),
@@ -1456,6 +1609,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "z"),
             equal(lower(base[0]), "tej"),
             equal(lower(base[0]), "przyczyny"),
@@ -1467,6 +1621,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "z"),
             equal(lower(base[0]), "tym"),
             equal(lower(base[0]), "że")
@@ -1477,6 +1632,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "z"),
             equal(lower(base[0]), "tym"),
             equal(lower(base[0]), "zastrzeżeniem"),
@@ -1488,6 +1644,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "zwłaszcza"),
             equal(lower(base[0]), "gdy")
         ),
@@ -1497,6 +1654,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "zwłaszcza"),
             equal(lower(base[0]), "kiedy")
         ),
@@ -1506,6 +1664,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "zwłaszcza"),
             equal(lower(base[0]), "jeśli")
         ),
@@ -1515,6 +1674,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "zwłaszcza"),
             equal(lower(base[0]), "jeżeli")
         ),
@@ -1524,6 +1684,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "zwłaszcza"),
             equal(lower(base[0]), "że")
         ),
@@ -1533,6 +1694,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "z"),
             equal(lower(base[0]), "zastrzeżeniem"),
             equal(lower(base[0]), "że")
@@ -1543,6 +1705,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "że"),
             equal(lower(base[0]), "aby")
         ),
@@ -1552,6 +1715,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "że"),
             equal(lower(base[0]), "aż")
         ),
@@ -1561,6 +1725,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "że"),
             equal(lower(base[0]), "gdy")
         ),
@@ -1570,6 +1735,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "że"),
             equal(lower(base[0]), "kiedy")
         ),
@@ -1579,6 +1745,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "że"),
             equal(lower(base[0]), "jeśli")
         ),
@@ -1588,6 +1755,7 @@ apply(
     );
 apply(
         match(
+            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "że"),
             equal(lower(base[0]), "jeżeli")
         ),

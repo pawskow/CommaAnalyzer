@@ -90,6 +90,16 @@ match_rules(
 		actions(
 			mark(M, "Spojnik")
 		)
+	);
+	apply(
+		match(
+		    and(
+		        inter(class[0], {interp})
+		        )
+		),
+		actions(
+			mark(M, "BezPrzecinkaPo")
+		)
 	)
 
 )

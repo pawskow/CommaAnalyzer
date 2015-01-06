@@ -1,3 +1,4 @@
+#optional_prep
 a choć
 a gdy
 a kiedy

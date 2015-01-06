@@ -14,6 +14,7 @@ INPUT_FORMAT = 'xces,ann'
 #tutaj wrzucamy metody do odpalania w odpowiedniej kolejnosci
 COMMA_INPUT_METHODS = [
                         comma_input_methods.bez_przecinka_po,
+                        comma_input_methods.mozliwy_rozdzielacz,
                         comma_input_methods.spojnik_zlozony,
                         comma_input_methods.wydzielenie,
                         comma_input_methods.zwykly_spojnik,
@@ -39,7 +40,7 @@ class CommaSentenceAnalyzer(object):
             match_rules = wccl_f.get_match_rules_ptr()
             match_rules.apply_all(asent)
         if DEBUG:
-            print self.__get_string_sentence(asent)
+            print self.get_string_sentence(asent)
             print asent.annotation_info()
 
 
@@ -58,7 +59,7 @@ class CommaSentenceAnalyzer(object):
         commas = result.get_commas()
         new_commas = []
         for idx, prob, comment in commas:
-            if prob<1.0 and prob>=0.5:
+            if prob<1.0 and prob>=0.7:
                 new_commas.append((idx, comment))
         for  idx, comment in new_commas:
             result.add_sure_comma(idx, comment)
@@ -76,7 +77,7 @@ class CommaSentenceAnalyzer(object):
                 string_result += ","
         return string_result
 
-    def __get_string_sentence(self, asent):
+    def get_string_sentence(self, asent):
         string_result = ""
         for idx, token in enumerate(asent.tokens()):
             if idx>0 and token.after_space():
