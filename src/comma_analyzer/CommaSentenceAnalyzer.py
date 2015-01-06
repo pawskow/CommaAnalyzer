@@ -13,12 +13,14 @@ INPUT_FORMAT = 'xces,ann'
 
 #tutaj wrzucamy metody do odpalania w odpowiedniej kolejnosci
 COMMA_INPUT_METHODS = [
+                        comma_input_methods.bez_przecinka_po,
                         comma_input_methods.spojnik_zlozony,
                         comma_input_methods.wydzielenie,
                         comma_input_methods.zwykly_spojnik,
                         comma_input_methods.wyrazenie_srodek,
                         comma_input_methods.wolacz_na_poczatku_zdania,
-                       #comma_input_methods.dwa_podobne_skladniki
+                        #comma_input_methods.dwa_podobne_skladniki,
+                        comma_input_methods.dwa_takie_same_wyrazy,
                         comma_input_methods.orzeczenia
                     ]
 
@@ -46,6 +48,8 @@ class CommaSentenceAnalyzer(object):
         for comma_method in COMMA_INPUT_METHODS:
             comma_method(asent, result)
         self.__make_last_decisions(asent, result)
+        if DEBUG:
+            print result.get_commas()
         return self.__get_string_sentence_with_commas(asent, result)
 
 

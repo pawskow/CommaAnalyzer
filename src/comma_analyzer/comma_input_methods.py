@@ -40,6 +40,7 @@ def spojnik_zlozony(asentence, result):
     ann_vec = chan.make_annotation_vector()
     for ann in ann_vec:
         first_indice = ann.indices[0]
+        map(result.add_sure_not_comma, ann.indices)
         if first_indice<1:
             continue #poczatek zdania
         result.add_sure_comma(first_indice-1, channel_name)
@@ -52,11 +53,13 @@ def zwykly_spojnik(asentence, result):
         return
     chan = asentence.get_channel(channel_name)
     ann_vec = chan.make_annotation_vector()
+    previous_end_index = -1 #wskazuje na koniec poprzedniego spojnika prostego. Potrzebne dla np.: bo kiedy
     for ann in ann_vec:
         first_indice = ann.indices[0]
-        if first_indice<1:
-            continue #poczatek zdania
-
+        print asentence.tokens()[first_indice].orth_utf8()
+        if previous_end_index>=first_indice-1 or not asentence.tokens()[first_indice].after_space() or result.sure_not_comma(first_indice):
+            continue #poczatek zdania, nie ma spacji ("moglby"), juz byl wczesniej spojnik
+        previous_end_index = ann.indices[-1]
         zloz = "SpojnikZlozony"
         if zloz not in asentence.all_channels():
              result.add_sure_comma(first_indice-1, channel_name)
@@ -67,15 +70,12 @@ def zwykly_spojnik(asentence, result):
                     ann_lenZ = len(ann.indices)
                     first = ann.indices[0]
                     if(first-1<first_indice and (first+ann_lenZ)>first_indice):#jezeli spojnik pojedynczy jest czescia któregos ze zlozonych to olac
-                        break
+                        continue
                     else:
-                         if(_check_token_belong_to_any(asentence.tokens()[first_indice-1],"interp")):
-                            return
+                         if _check_token_belong_to_any(asentence.tokens()[first_indice-1], ["interp"]):
+                            continue
                          else:
                             result.add_sure_comma(first_indice-1, channel_name)
-
-
-
 
 def wydzielenie(asentence, result):
     #szuka typowych wyrażeń, które zwyczajowo są wydzielone przecinkami czyli przed i po wyrazeniu wstawiam
@@ -87,6 +87,7 @@ def wydzielenie(asentence, result):
     count=1
     for ann in ann_vec:
         first_indice = ann.indices[0]
+        map(result.add_sure_not_comma, ann.indices)
         ann_len = len(ann.indices)
         result.add_sure_comma(first_indice-1+ann_len, channel_name)
         if first_indice<1:
@@ -98,6 +99,7 @@ def orzeczenia(asentence, result):
     channel_name = "Orzeczenie"
     if not channel_name in asentence.all_channels():
         return
+    sure_commas = result.get_commas_with_prob(0.5)
     chan = asentence.get_channel(channel_name)
     ann_vec = chan.make_annotation_vector()
     numberVerb = len(ann_vec)
@@ -107,17 +109,13 @@ def orzeczenia(asentence, result):
           first = ann_vec[idx].indices[0]
           second= ann_vec[idx+1].indices[0]
           putOrNot = True
-          while first<second:
+          while first<second and putOrNot:
+            if (_check_token_belong_to_any(asentence.tokens()[first], ['interp','conj'])) or first in sure_commas:
+              putOrNot = False
             first+=1
-            if (_check_token_belong_to_any(asentence.tokens()[first], ['inetrp','conj'])):
-               putOrNot = False
-
-          if(putOrNot):
-             result.add_sure_comma(second-2, channel_name)
+          if putOrNot:
+             result.add_sure_comma(second-1, channel_name)
           idx+=1
-
-
-
 
 
 def wyrazenie_srodek(asentence, result):
@@ -133,7 +131,7 @@ def wyrazenie_srodek(asentence, result):
         if first_indice<1:
             continue #poczatek zdania
 
-    result.add_sure_comma(first_indice, channel_name)
+    result.add_sure_comma(first_indice+1, channel_name)
 
 def dwa_podobne_skladniki(asentence, result): #prosta metoda na powtórzenia
   index=1
@@ -142,10 +140,26 @@ def dwa_podobne_skladniki(asentence, result): #prosta metoda na powtórzenia
       class1 = _get_token_all_classes(asentence.tokens()[index-1])
       class2 = _get_token_all_classes(asentence.tokens()[index])
       if(class1==class2):
-          print index
           result.add_sure_comma(index-1, "DwiePodobneCzęściMowy")
       index+=1
 
+def dwa_takie_same_wyrazy(asentence, result):
+  index=1
+  tokens = len(asentence.tokens())
+  while index<tokens:
+      if asentence.tokens()[index-1].orth_utf8().lower() == asentence.tokens()[index].orth_utf8().lower() and not _check_token_belong_to_any(asentence.tokens()[index], ["interp"]):
+          result.add_sure_comma(index-1, "IdentyczneWyrazy")
+      index+=1
+
+def bez_przecinka_po(asentence, result):
+    channel_name = "BezPrzecinkaPo"
+    if not asentence.has_channel(channel_name):
+        return
+    chan = asentence.get_channel(channel_name)
+    ann_vec = chan.make_annotation_vector()
+    for ann in ann_vec:
+        last_index = ann.indices[-1]
+        result.add_sure_not_comma(last_index)
 
 def wolacz_na_poczatku_zdania(asentence, result):
     channel_name = "WolaczRzeczownik"

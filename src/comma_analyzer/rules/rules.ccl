@@ -35,7 +35,8 @@ match_rules(
 
 	  apply(
         match(
-            inter(class[-1], {praet, fin, impt, pcon})
+            optional(inter(class[0], {prep})),
+            inter(class[0], {praet, fin, impt, pcon})
 
         ),
         actions(
@@ -72,6 +73,18 @@ match_rules(
 		    and(
 		        not(isannpart(0, "SpojnikZlozony")),
 		        inter(lex(lower(base[0]), "spoj_poj"), ["spojnik"])
+		        )
+		),
+		actions(
+			mark(M, "Spojnik")
+		)
+	);
+
+	apply(
+		match(
+		    and(
+		        not(isannpart(0, "SpojnikZlozony")),
+		        inter(lex(lower(base[0]), "spoj_poj"), ["wtracenie"])
 		        )
 		),
 		actions(

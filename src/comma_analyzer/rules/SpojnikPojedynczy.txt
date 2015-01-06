@@ -1,3 +1,5 @@
+#optional_prep
+a
 aby
 ale
 bo
@@ -33,3 +35,6 @@ czyli
 by
 więc
 mianowicie
+czy
+co
+kto
