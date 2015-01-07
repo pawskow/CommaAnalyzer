@@ -5,6 +5,9 @@ apply(
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "choć")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -14,6 +17,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "gdy")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -25,6 +31,9 @@ apply(
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "kiedy")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -34,6 +43,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "jeśli")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -45,6 +57,9 @@ apply(
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "jeżeli")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -54,6 +69,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "mianowicie")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -65,6 +83,9 @@ apply(
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "następnie")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -74,6 +95,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "nie")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -85,6 +109,9 @@ apply(
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "ponieważ")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -95,6 +122,9 @@ apply(
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "potem")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -104,6 +134,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "także")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -116,6 +149,9 @@ apply(
             equal(lower(base[0]), "także"),
             equal(lower(base[0]), "że")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -125,6 +161,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "to")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -136,6 +175,9 @@ apply(
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "więc")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -145,6 +187,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "a"),
             equal(lower(base[0]), "że")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -156,6 +201,9 @@ apply(
             equal(lower(base[0]), "albo"),
             equal(lower(base[0]), "lepiej")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -165,6 +213,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "albo"),
             equal(lower(base[0]), "raczej")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -176,6 +227,9 @@ apply(
             equal(lower(base[0]), "ale"),
             equal(lower(base[0]), "i")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -185,6 +239,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "ani"),
             equal(lower(base[0]), "nawet")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -196,6 +253,9 @@ apply(
             equal(lower(base[0]), "ani"),
             equal(lower(base[0]), "też")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -206,6 +266,9 @@ apply(
             equal(lower(base[0]), "chyba"),
             equal(lower(base[0]), "że")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -215,6 +278,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "chyba"),
             equal(lower(base[0]), "żeby")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -226,6 +292,9 @@ apply(
             equal(lower(base[0]), "czy"),
             equal(lower(base[0]), "może")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -235,6 +304,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "dlatego"),
             equal(lower(base[0]), "że")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -246,6 +318,9 @@ apply(
             equal(lower(base[0]), "dlatego"),
             equal(lower(base[0]), "żeby")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -255,6 +330,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "dlatego"),
             equal(lower(base[0]), "abyby")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -266,6 +344,9 @@ apply(
             equal(lower(base[0]), "dopiero"),
             equal(lower(base[0]), "gdy")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -273,8 +354,11 @@ apply(
 apply(
         match(
             optional(inter(class[0], {prep})),
-            equal(lower(base[0]), "dopero"),
+            equal(lower(base[0]), "dopiero"),
             equal(lower(base[0]), "kiedy")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -286,6 +370,9 @@ apply(
             equal(lower(base[0]), "dopiero"),
             equal(lower(base[0]), "jak")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -295,6 +382,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "dzięki"),
             equal(lower(base[0]), "temu")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -307,6 +397,9 @@ apply(
             equal(lower(base[0]), "temu"),
             equal(lower(base[0]), "że")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -316,6 +409,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "chociaż")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -327,6 +423,9 @@ apply(
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "choć")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -336,6 +435,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "jednak")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -347,6 +449,9 @@ apply(
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "kwita")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -356,6 +461,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "koniec")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -367,6 +475,9 @@ apply(
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "tak")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -376,6 +487,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "to")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -388,6 +502,9 @@ apply(
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "ile")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -399,6 +516,9 @@ apply(
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "jak")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -409,6 +529,9 @@ apply(
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "tyle")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -421,6 +544,9 @@ apply(
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "gdy")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -432,6 +558,9 @@ apply(
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "kiedy")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -441,6 +570,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "na"),
             equal(lower(base[0]), "który")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -453,6 +585,9 @@ apply(
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "jeśli")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -463,6 +598,9 @@ apply(
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "jeżeli")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -475,6 +613,9 @@ apply(
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "który")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -486,6 +627,9 @@ apply(
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "żeby")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -496,6 +640,9 @@ apply(
             equal(lower(base[0]), "i"),
             equal(lower(base[0]), "tylko"),
             equal(lower(base[0]), "tyle")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -508,6 +655,9 @@ apply(
             equal(lower(base[0]), "tylko"),
             equal(lower(base[0]), "tak")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -518,6 +668,9 @@ apply(
             equal(lower(base[0]), "ile"),
             equal(lower(base[0]), "razy")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -527,6 +680,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "ile"),
             equal(lower(base[0]), "że")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -538,6 +694,9 @@ apply(
             equal(lower(base[0]), "innymi"),
             equal(lower(base[0]), "słowy")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -547,6 +706,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "jak"),
             equal(lower(base[0]), "gdyby")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -558,6 +720,9 @@ apply(
             equal(lower(base[0]), "jak"),
             equal(lower(base[0]), "i")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -568,6 +733,9 @@ apply(
             equal(lower(base[0]), "jak"),
             equal(lower(base[0]), "również")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -577,6 +745,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "jak"),
             equal(lower(base[0]), "też")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -588,6 +759,9 @@ apply(
             equal(lower(base[0]), "jak"),
             equal(lower(base[0]), "żeby")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -598,6 +772,9 @@ apply(
             equal(lower(base[0]), "jako"),
             equal(lower(base[0]), "też")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -607,6 +784,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "jako"),
             equal(lower(base[0]), "że")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -619,6 +799,9 @@ apply(
             equal(lower(base[0]), "zawsze"),
             equal(lower(base[0]), "gdy")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -629,6 +812,9 @@ apply(
             equal(lower(base[0]), "który"),
             equal(lower(base[0]), "jeśli")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -638,6 +824,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "który"),
             equal(lower(base[0]), "jeżeli")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -649,6 +838,9 @@ apply(
             equal(lower(base[0]), "lecz"),
             equal(lower(base[0]), "i")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -658,6 +850,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "lub"),
             equal(lower(base[0]), "raczej")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -669,6 +864,9 @@ apply(
             equal(lower(base[0]), "mimo"),
             equal(lower(base[0]), "to")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -678,6 +876,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "mimo"),
             equal(lower(base[0]), "że")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -689,6 +890,9 @@ apply(
             equal(lower(base[0]), "nawet"),
             equal(lower(base[0]), "jeśli")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -698,6 +902,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "nawet"),
             equal(lower(base[0]), "jeżeli")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -710,6 +917,9 @@ apply(
             equal(lower(base[0]), "skutek"),
             equal(lower(base[0]), "czego")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -720,6 +930,9 @@ apply(
             equal(lower(base[0]), "na"),
             equal(lower(base[0]), "skutek"),
             equal(lower(base[0]), "tego")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -733,6 +946,9 @@ apply(
             equal(lower(base[0]), "tego"),
             equal(lower(base[0]), "że")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -743,6 +959,9 @@ apply(
             equal(lower(base[0]), "po"),
             equal(lower(base[0]), "co")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -752,6 +971,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "po"),
             equal(lower(base[0]), "czym")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -764,6 +986,9 @@ apply(
             equal(lower(base[0]), "warunkiem"),
             equal(lower(base[0]), "że")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -773,6 +998,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "podczas"),
             equal(lower(base[0]), "gdy")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -784,6 +1012,9 @@ apply(
             equal(lower(base[0]), "podczas"),
             equal(lower(base[0]), "kiedy")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -793,6 +1024,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "podobnie"),
             equal(lower(base[0]), "jak")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -806,6 +1040,9 @@ apply(
             equal(lower(base[0]), "warunkiem"),
             equal(lower(base[0]), "że")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -816,6 +1053,9 @@ apply(
             equal(lower(base[0]), "pomimo"),
             equal(lower(base[0]), "to")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -825,6 +1065,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "pomimo"),
             equal(lower(base[0]), "że")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -836,6 +1079,9 @@ apply(
             equal(lower(base[0]), "potem"),
             equal(lower(base[0]), "gdy")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -845,6 +1091,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "po"),
             equal(lower(base[0]), "to")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -857,6 +1106,9 @@ apply(
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "żeby")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -867,6 +1119,9 @@ apply(
             equal(lower(base[0]), "po"),
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "abyby")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -878,6 +1133,9 @@ apply(
             equal(lower(base[0]), "przy"),
             equal(lower(base[0]), "czym")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -887,6 +1145,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "skutkiem"),
             equal(lower(base[0]), "czego")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -898,6 +1159,9 @@ apply(
             equal(lower(base[0]), "szczególnie"),
             equal(lower(base[0]), "że")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -908,6 +1172,9 @@ apply(
             equal(lower(base[0]), "szczególnie"),
             equal(lower(base[0]), "żeby")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -917,6 +1184,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "szczególnie"),
             equal(lower(base[0]), "abyby")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -928,6 +1198,9 @@ apply(
             equal(lower(base[0]), "tak"),
             equal(lower(base[0]), "jak")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -937,6 +1210,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "tak"),
             equal(lower(base[0]), "jakby")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -948,6 +1224,9 @@ apply(
             equal(lower(base[0]), "tak"),
             equal(lower(base[0]), "skąd")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -957,6 +1236,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "tak"),
             equal(lower(base[0]), "że")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -968,6 +1250,9 @@ apply(
             equal(lower(base[0]), "tak"),
             equal(lower(base[0]), "żeby")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -977,6 +1262,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "tak"),
             equal(lower(base[0]), "abyby")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -989,6 +1277,9 @@ apply(
             equal(lower(base[0]), "sam"),
             equal(lower(base[0]), "jak")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -999,6 +1290,9 @@ apply(
             equal(lower(base[0]), "tam"),
             equal(lower(base[0]), "gdzie")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1008,6 +1302,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "tam"),
             equal(lower(base[0]), "skąd")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1020,6 +1317,9 @@ apply(
             equal(lower(base[0]), "sam"),
             equal(lower(base[0]), "co")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1029,6 +1329,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "teraz"),
             equal(lower(base[0]), "gdy")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1040,6 +1343,9 @@ apply(
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "co")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1049,6 +1355,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "jest")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1060,6 +1369,9 @@ apply(
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "znaczy")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1070,6 +1382,9 @@ apply(
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "znaczy"),
             equal(lower(base[0]), "że")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1082,6 +1397,9 @@ apply(
             equal(lower(base[0]), "znaczy"),
             equal(lower(base[0]), "żeby")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1092,6 +1410,9 @@ apply(
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "znaczy"),
             equal(lower(base[0]), "abyby")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1103,6 +1424,9 @@ apply(
             equal(lower(base[0]), "tyle"),
             equal(lower(base[0]), "że")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1112,6 +1436,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "tylko"),
             equal(lower(base[0]), "że")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1123,6 +1450,9 @@ apply(
             equal(lower(base[0]), "tylko"),
             equal(lower(base[0]), "żeby")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1132,6 +1462,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "tylko"),
             equal(lower(base[0]), "abyby")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1144,6 +1477,9 @@ apply(
             equal(lower(base[0]), "bardziej"),
             equal(lower(base[0]), "że")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1155,6 +1491,9 @@ apply(
             equal(lower(base[0]), "bardziej"),
             equal(lower(base[0]), "żeby")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1165,6 +1504,9 @@ apply(
             equal(lower(base[0]), "tym"),
             equal(lower(base[0]), "bardziej"),
             equal(lower(base[0]), "abyby")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1176,6 +1518,9 @@ apply(
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "przypadku"),
             equal(lower(base[0]), "gdy")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1188,6 +1533,9 @@ apply(
             equal(lower(base[0]), "przypadku"),
             equal(lower(base[0]), "kiedy")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1198,6 +1546,9 @@ apply(
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "przypadku"),
             equal(lower(base[0]), "gdyby")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1211,6 +1562,9 @@ apply(
             equal(lower(base[0]), "sposób"),
             equal(lower(base[0]), "że")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1222,6 +1576,9 @@ apply(
             equal(lower(base[0]), "taki"),
             equal(lower(base[0]), "sposób"),
             equal(lower(base[0]), "żeby")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1235,6 +1592,9 @@ apply(
             equal(lower(base[0]), "sposób"),
             equal(lower(base[0]), "abyby")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1247,6 +1607,9 @@ apply(
             equal(lower(base[0]), "celu"),
             equal(lower(base[0]), "żeby")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1258,6 +1621,9 @@ apply(
             equal(lower(base[0]), "tym"),
             equal(lower(base[0]), "celu"),
             equal(lower(base[0]), "abyby")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1270,6 +1636,9 @@ apply(
             equal(lower(base[0]), "miarę"),
             equal(lower(base[0]), "jak")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1281,6 +1650,9 @@ apply(
             equal(lower(base[0]), "razie"),
             equal(lower(base[0]), "gdyby")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1292,6 +1664,9 @@ apply(
             equal(lower(base[0]), "wypadku"),
             equal(lower(base[0]), "gdy")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1302,6 +1677,9 @@ apply(
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "wypadku"),
             equal(lower(base[0]), "kiedy")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1314,6 +1692,9 @@ apply(
             equal(lower(base[0]), "wypadku"),
             equal(lower(base[0]), "gdyby")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1323,6 +1704,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "właśnie"),
             equal(lower(base[0]), "gdy")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1334,6 +1718,9 @@ apply(
             equal(lower(base[0]), "właśnie"),
             equal(lower(base[0]), "kiedy")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1343,6 +1730,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "właśnie"),
             equal(lower(base[0]), "jak")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1354,6 +1744,9 @@ apply(
             equal(lower(base[0]), "wobec"),
             equal(lower(base[0]), "czego")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1363,6 +1756,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "wobec"),
             equal(lower(base[0]), "tego")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1375,6 +1771,9 @@ apply(
             equal(lower(base[0]), "tego"),
             equal(lower(base[0]), "że")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1384,6 +1783,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "wprzód"),
             equal(lower(base[0]), "nim")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1396,6 +1798,9 @@ apply(
             equal(lower(base[0]), "przypadku"),
             equal(lower(base[0]), "gdy")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1405,6 +1810,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "wskutek"),
             equal(lower(base[0]), "tego")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1417,6 +1825,9 @@ apply(
             equal(lower(base[0]), "tego"),
             equal(lower(base[0]), "że")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1426,6 +1837,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "wtedy"),
             equal(lower(base[0]), "gdy")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1438,6 +1852,9 @@ apply(
             equal(lower(base[0]), "ten"),
             equal(lower(base[0]), "sposób")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1450,6 +1867,9 @@ apply(
             equal(lower(base[0]), "sposób"),
             equal(lower(base[0]), "żeby")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1461,6 +1881,9 @@ apply(
             equal(lower(base[0]), "ten"),
             equal(lower(base[0]), "sposób"),
             equal(lower(base[0]), "abyby")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1473,6 +1896,9 @@ apply(
             equal(lower(base[0]), "tym"),
             equal(lower(base[0]), "celu")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1484,6 +1910,9 @@ apply(
             equal(lower(base[0]), "tym"),
             equal(lower(base[0]), "celu"),
             equal(lower(base[0]), "żeby")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1497,6 +1926,9 @@ apply(
             equal(lower(base[0]), "celu"),
             equal(lower(base[0]), "abyby")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1507,6 +1939,9 @@ apply(
             equal(lower(base[0]), "w"),
             equal(lower(base[0]), "wyniku"),
             equal(lower(base[0]), "tego")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1519,6 +1954,9 @@ apply(
             equal(lower(base[0]), "wyniku"),
             equal(lower(base[0]), "tego"),
             equal(lower(base[0]), "że")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1532,6 +1970,9 @@ apply(
             equal(lower(base[0]), "z"),
             equal(lower(base[0]), "tym")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1545,6 +1986,9 @@ apply(
             equal(lower(base[0]), "tym"),
             equal(lower(base[0]), "że")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1555,6 +1999,9 @@ apply(
             equal(lower(base[0]), "z"),
             equal(lower(base[0]), "chwilą"),
             equal(lower(base[0]), "gdy")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1568,6 +2015,9 @@ apply(
             equal(lower(base[0]), "myślą"),
             equal(lower(base[0]), "żeby")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1580,6 +2030,9 @@ apply(
             equal(lower(base[0]), "myślą"),
             equal(lower(base[0]), "abyby")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1590,6 +2043,9 @@ apply(
             equal(lower(base[0]), "z"),
             equal(lower(base[0]), "tego"),
             equal(lower(base[0]), "powodu")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1603,6 +2059,9 @@ apply(
             equal(lower(base[0]), "powodu"),
             equal(lower(base[0]), "że")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1615,6 +2074,9 @@ apply(
             equal(lower(base[0]), "przyczyny"),
             equal(lower(base[0]), "że")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1625,6 +2087,9 @@ apply(
             equal(lower(base[0]), "z"),
             equal(lower(base[0]), "tym"),
             equal(lower(base[0]), "że")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1637,6 +2102,9 @@ apply(
             equal(lower(base[0]), "tym"),
             equal(lower(base[0]), "zastrzeżeniem"),
             equal(lower(base[0]), "że")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1648,6 +2116,9 @@ apply(
             equal(lower(base[0]), "zwłaszcza"),
             equal(lower(base[0]), "gdy")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1657,6 +2128,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "zwłaszcza"),
             equal(lower(base[0]), "kiedy")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1668,6 +2142,9 @@ apply(
             equal(lower(base[0]), "zwłaszcza"),
             equal(lower(base[0]), "jeśli")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1678,6 +2155,9 @@ apply(
             equal(lower(base[0]), "zwłaszcza"),
             equal(lower(base[0]), "jeżeli")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1687,6 +2167,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "zwłaszcza"),
             equal(lower(base[0]), "że")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1698,6 +2181,9 @@ apply(
             equal(lower(base[0]), "z"),
             equal(lower(base[0]), "zastrzeżeniem"),
             equal(lower(base[0]), "że")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1709,6 +2195,9 @@ apply(
             equal(lower(base[0]), "że"),
             equal(lower(base[0]), "aby")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1718,6 +2207,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "że"),
             equal(lower(base[0]), "aż")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1729,6 +2221,9 @@ apply(
             equal(lower(base[0]), "że"),
             equal(lower(base[0]), "gdy")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1738,6 +2233,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "że"),
             equal(lower(base[0]), "kiedy")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")
@@ -1749,6 +2247,9 @@ apply(
             equal(lower(base[0]), "że"),
             equal(lower(base[0]), "jeśli")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
+        ),
         actions(
             mark(M, "SpojnikZlozony")
         )
@@ -1758,6 +2259,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "że"),
             equal(lower(base[0]), "jeżeli")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikZlozony"))
         ),
         actions(
             mark(M, "SpojnikZlozony")

@@ -4,6 +4,9 @@ apply(
             equal(lower(base[0]), "co"),
             equal(lower(base[0]), "więcej")
         ),
+        cond(
+            not(isannpart(first(M), "Wydzielenie"))
+        ),
         actions(
             mark(M, "Wydzielenie")
         )
@@ -12,6 +15,9 @@ apply(
         match(
             equal(lower(base[0]), "co"),
             equal(lower(base[0]), "gorsza")
+        ),
+        cond(
+            not(isannpart(first(M), "Wydzielenie"))
         ),
         actions(
             mark(M, "Wydzielenie")
@@ -22,6 +28,9 @@ apply(
             equal(lower(base[0]), "innymi"),
             equal(lower(base[0]), "słowy")
         ),
+        cond(
+            not(isannpart(first(M), "Wydzielenie"))
+        ),
         actions(
             mark(M, "Wydzielenie")
         )
@@ -30,6 +39,9 @@ apply(
         match(
             equal(lower(base[0]), "nawiasem"),
             equal(lower(base[0]), "mówiąc")
+        ),
+        cond(
+            not(isannpart(first(M), "Wydzielenie"))
         ),
         actions(
             mark(M, "Wydzielenie")
@@ -41,6 +53,9 @@ apply(
             equal(lower(base[0]), "czy"),
             equal(lower(base[0]), "owak")
         ),
+        cond(
+            not(isannpart(first(M), "Wydzielenie"))
+        ),
         actions(
             mark(M, "Wydzielenie")
         )
@@ -51,6 +66,9 @@ apply(
             equal(lower(base[0]), "czy"),
             equal(lower(base[0]), "siak")
         ),
+        cond(
+            not(isannpart(first(M), "Wydzielenie"))
+        ),
         actions(
             mark(M, "Wydzielenie")
         )
@@ -60,6 +78,9 @@ apply(
             equal(lower(base[0]), "tak"),
             equal(lower(base[0]), "czy"),
             equal(lower(base[0]), "inaczej")
+        ),
+        cond(
+            not(isannpart(first(M), "Wydzielenie"))
         ),
         actions(
             mark(M, "Wydzielenie")

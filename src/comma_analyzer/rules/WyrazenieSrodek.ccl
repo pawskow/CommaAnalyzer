@@ -4,6 +4,9 @@ apply(
             equal(lower(base[0]), "tego"),
             equal(lower(base[0]), "czy")
         ),
+        cond(
+            not(isannpart(first(M), "WyrazenieSrodek"))
+        ),
         actions(
             mark(M, "WyrazenieSrodek")
         )
@@ -12,6 +15,9 @@ apply(
         match(
             equal(lower(base[0]), "pytanie"),
             equal(lower(base[0]), "co")
+        ),
+        cond(
+            not(isannpart(first(M), "WyrazenieSrodek"))
         ),
         actions(
             mark(M, "WyrazenieSrodek")
@@ -22,6 +28,9 @@ apply(
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "gdzie")
         ),
+        cond(
+            not(isannpart(first(M), "WyrazenieSrodek"))
+        ),
         actions(
             mark(M, "WyrazenieSrodek")
         )
@@ -30,6 +39,9 @@ apply(
         match(
             equal(lower(base[0]), "to"),
             equal(lower(base[0]), "czy")
+        ),
+        cond(
+            not(isannpart(first(M), "WyrazenieSrodek"))
         ),
         actions(
             mark(M, "WyrazenieSrodek")

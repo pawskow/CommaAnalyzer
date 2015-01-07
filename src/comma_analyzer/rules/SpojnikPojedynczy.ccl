@@ -4,6 +4,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "a")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
+        ),
         actions(
             mark(M, "SpojnikPojedynczy")
         )
@@ -12,6 +15,9 @@ apply(
         match(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "aby")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
         ),
         actions(
             mark(M, "SpojnikPojedynczy")
@@ -22,6 +28,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "ale")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
+        ),
         actions(
             mark(M, "SpojnikPojedynczy")
         )
@@ -30,6 +39,9 @@ apply(
         match(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "bo")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
         ),
         actions(
             mark(M, "SpojnikPojedynczy")
@@ -40,6 +52,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "bowiem")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
+        ),
         actions(
             mark(M, "SpojnikPojedynczy")
         )
@@ -48,6 +63,9 @@ apply(
         match(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "chociaż")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
         ),
         actions(
             mark(M, "SpojnikPojedynczy")
@@ -58,6 +76,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "choć")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
+        ),
         actions(
             mark(M, "SpojnikPojedynczy")
         )
@@ -66,6 +87,9 @@ apply(
         match(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "gdyż")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
         ),
         actions(
             mark(M, "SpojnikPojedynczy")
@@ -76,6 +100,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "jednak")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
+        ),
         actions(
             mark(M, "SpojnikPojedynczy")
         )
@@ -84,6 +111,9 @@ apply(
         match(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "jeśli")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
         ),
         actions(
             mark(M, "SpojnikPojedynczy")
@@ -94,6 +124,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "jeżeli")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
+        ),
         actions(
             mark(M, "SpojnikPojedynczy")
         )
@@ -102,6 +135,9 @@ apply(
         match(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "lecz")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
         ),
         actions(
             mark(M, "SpojnikPojedynczy")
@@ -112,6 +148,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "natomiast")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
+        ),
         actions(
             mark(M, "SpojnikPojedynczy")
         )
@@ -120,6 +159,9 @@ apply(
         match(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "ponieważ")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
         ),
         actions(
             mark(M, "SpojnikPojedynczy")
@@ -130,6 +172,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "żeby")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
+        ),
         actions(
             mark(M, "SpojnikPojedynczy")
         )
@@ -138,6 +183,9 @@ apply(
         match(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "toteż")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
         ),
         actions(
             mark(M, "SpojnikPojedynczy")
@@ -148,6 +196,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "dopóty")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
+        ),
         actions(
             mark(M, "SpojnikPojedynczy")
         )
@@ -156,6 +207,9 @@ apply(
         match(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "dlaczego")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
         ),
         actions(
             mark(M, "SpojnikPojedynczy")
@@ -166,6 +220,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "zanim")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
+        ),
         actions(
             mark(M, "SpojnikPojedynczy")
         )
@@ -174,6 +231,9 @@ apply(
         match(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "póki")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
         ),
         actions(
             mark(M, "SpojnikPojedynczy")
@@ -184,6 +244,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "czyj")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
+        ),
         actions(
             mark(M, "SpojnikPojedynczy")
         )
@@ -192,6 +255,9 @@ apply(
         match(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "gdy")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
         ),
         actions(
             mark(M, "SpojnikPojedynczy")
@@ -202,6 +268,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "kiedy")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
+        ),
         actions(
             mark(M, "SpojnikPojedynczy")
         )
@@ -210,6 +279,9 @@ apply(
         match(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "gdyby")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
         ),
         actions(
             mark(M, "SpojnikPojedynczy")
@@ -220,6 +292,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "który")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
+        ),
         actions(
             mark(M, "SpojnikPojedynczy")
         )
@@ -228,6 +303,9 @@ apply(
         match(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "jaki")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
         ),
         actions(
             mark(M, "SpojnikPojedynczy")
@@ -238,6 +316,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "zamiast")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
+        ),
         actions(
             mark(M, "SpojnikPojedynczy")
         )
@@ -246,6 +327,9 @@ apply(
         match(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "ażeby")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
         ),
         actions(
             mark(M, "SpojnikPojedynczy")
@@ -256,6 +340,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "iżby")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
+        ),
         actions(
             mark(M, "SpojnikPojedynczy")
         )
@@ -264,6 +351,9 @@ apply(
         match(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "że")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
         ),
         actions(
             mark(M, "SpojnikPojedynczy")
@@ -274,6 +364,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "iż")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
+        ),
         actions(
             mark(M, "SpojnikPojedynczy")
         )
@@ -282,6 +375,9 @@ apply(
         match(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "czyli")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
         ),
         actions(
             mark(M, "SpojnikPojedynczy")
@@ -292,6 +388,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "by")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
+        ),
         actions(
             mark(M, "SpojnikPojedynczy")
         )
@@ -300,6 +399,9 @@ apply(
         match(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "więc")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
         ),
         actions(
             mark(M, "SpojnikPojedynczy")
@@ -310,14 +412,8 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "mianowicie")
         ),
-        actions(
-            mark(M, "SpojnikPojedynczy")
-        )
-    );
-apply(
-        match(
-            optional(inter(class[0], {prep})),
-            equal(lower(base[0]), "czy")
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
         ),
         actions(
             mark(M, "SpojnikPojedynczy")
@@ -328,6 +424,9 @@ apply(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "co")
         ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
+        ),
         actions(
             mark(M, "SpojnikPojedynczy")
         )
@@ -336,6 +435,21 @@ apply(
         match(
             optional(inter(class[0], {prep})),
             equal(lower(base[0]), "kto")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
+        ),
+        actions(
+            mark(M, "SpojnikPojedynczy")
+        )
+    );
+apply(
+        match(
+            optional(inter(class[0], {prep})),
+            equal(lower(base[0]), "skąd")
+        ),
+        cond(
+            not(isannpart(first(M), "SpojnikPojedynczy"))
         ),
         actions(
             mark(M, "SpojnikPojedynczy")
