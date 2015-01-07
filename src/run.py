@@ -5,6 +5,7 @@ import sys
 import os
 
 from comma_analyzer.CommaAnalyzer import CommaAnalyzer
+from comma_analyzer.ResultQualityValidator import ResultQualityValidator
 
 DEFAULT_FILE_NAME = 'input.txt'
 RESULT_DIR = 'result'
@@ -41,6 +42,7 @@ if __name__ == '__main__':
     original_sentences = original_ca.raw_sentences()
     analyzed_sentences = analyzed_ca.done_sentences()
 
+    rqv = ResultQualityValidator()
     with open(input_result_file, "w") as f_original:
         with open(output_result_file, "w") as f_analyzed:
 
@@ -51,4 +53,8 @@ if __name__ == '__main__':
                 f_analyzed.write(analyzed_sentence+'\n')
                 print original_sentence
                 print analyzed_sentence
+                rqv.check_sentence(original_sentence, analyzed_sentence)
 
+    print rqv.get_correct()
+    print rqv.get_incorrect()
+    print rqv.get_missing()

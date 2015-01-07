@@ -9,6 +9,7 @@ __CURR_DIR__ = os.path.dirname(os.path.abspath(__file__))
 RULES_DIR = os.path.join(__CURR_DIR__, "rules")
 __WCCL_FILES = []
 __WCCL_IN_ORDER = ['BezPrzecinkaPo.txt','Rozdzielacz.txt','SpojnikZlozony.txt','Wydzielenie.txt','WyrazenieSrodek.txt', 'SpojnikPojedynczy.txt' ,'rules.ccl', 'wolaczReguly.ccl',]
+#__WCCL_IN_ORDER = ['SpojnikZlozony.ccl']
 
 RULE_PARTS = [
 """match_rules(
@@ -20,6 +21,9 @@ RULE_PARTS = [
 """,
 "            equal(lower(base[0]), \"%s\")",
 """
+        ),
+        cond(
+            not(isannpart(first(M), "%s"))
         ),
         actions(
             mark(M, "%s")
@@ -47,7 +51,7 @@ def generate(file_path):
                     r_f.write(RULE_PARTS[2])
                 words_rules = map(lambda w: (RULE_PARTS[3] %w), l.strip().split(" "))
                 r_f.write(',\n'.join(words_rules))
-                r_f.write(RULE_PARTS[4] %rule_name)
+                r_f.write(RULE_PARTS[4] %(rule_name, rule_name))
                 first_line = False
             r_f.write(RULE_PARTS[5])
     __WCCL_FILES.append(dest_file_path)
