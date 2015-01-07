@@ -17,12 +17,17 @@ COMMA_INPUT_METHODS = [
                         comma_input_methods.mozliwy_rozdzielacz,
                         comma_input_methods.spojnik_zlozony,
                         comma_input_methods.wydzielenie,
+                        comma_input_methods.miedzy_a,
                         comma_input_methods.zwykly_spojnik,
                         comma_input_methods.wyrazenie_srodek,
                         comma_input_methods.wolacz_na_poczatku_zdania,
                         #comma_input_methods.dwa_podobne_skladniki,
                         comma_input_methods.dwa_takie_same_wyrazy,
-                        comma_input_methods.orzeczenia
+                        comma_input_methods.orzeczenia,
+                        comma_input_methods.ani_powtorzenie,
+                        comma_input_methods.porownania
+
+
                     ]
 
 class CommaSentenceAnalyzer(object):

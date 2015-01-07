@@ -281,15 +281,6 @@ apply(
 apply(
         match(
             optional(inter(class[0], {prep})),
-            equal(lower(base[0]), "jak")
-        ),
-        actions(
-            mark(M, "SpojnikPojedynczy")
-        )
-    );
-apply(
-        match(
-            optional(inter(class[0], {prep})),
             equal(lower(base[0]), "czyli")
         ),
         actions(

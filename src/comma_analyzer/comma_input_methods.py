@@ -24,6 +24,8 @@ def _check_token_belong_to_all(token, names):
             return False
     return True
 
+
+
 def _check_token_belong_to_any(token, names):
     values = _get_token_all_classes(token)
     for value in values:
@@ -160,6 +162,61 @@ def dwa_takie_same_wyrazy(asentence, result):
       if asentence.tokens()[index-1].orth_utf8().lower() == asentence.tokens()[index].orth_utf8().lower() and not _check_token_belong_to_any(asentence.tokens()[index], ["interp"]):
           result.add_sure_comma(index-1, "IdentyczneWyrazy")
       index+=1
+def miedzy_a(asentence, result):
+    channel_name = "Miedzy"
+    if not asentence.has_channel(channel_name):
+        return
+
+    chan = asentence.get_channel(channel_name)
+    ann_vec = chan.make_annotation_vector()
+
+    for ann in ann_vec:
+        first_indice = ann.indices[0]
+        idx = first_indice
+        length = len(asentence.tokens())
+        while idx<length:
+            if(asentence.tokens()[idx].orth_utf8().lower()=='a'):
+               result.add_sure_not_comma(idx-1)
+            idx+=1
+
+
+
+def ani_powtorzenie(asentence,result):
+
+    channel_name = "PowtorzeniaANI"
+    if not asentence.has_channel(channel_name):
+        return
+
+    chan = asentence.get_channel(channel_name)
+    ann_vec = chan.make_annotation_vector()
+
+    if(len(ann_vec)<2):
+        return
+    count=0
+    for ann in ann_vec:
+        first_indice = ann.indices[0]
+        if(count>0):
+               result.add_sure_comma(first_indice-1, channel_name)
+        count=count+1
+def porownania(asentence, result):
+    channel_name = "Porownania"
+    if not asentence.has_channel(channel_name):
+        return
+    chan = asentence.get_channel(channel_name)
+    ann_vec = chan.make_annotation_vector()
+    wyrazenie_wykluczajace = ['bądź','czy','ani','lub','albo','oraz','i']
+    wyrazenie_wykluczajace2 = ['gdyby','i']
+    for ann in ann_vec:
+        first_indice = ann.indices[0]
+        index = first_indice
+        length = len(asentence.tokens())
+        while index<length:
+            if asentence.tokens()[index].orth_utf8().lower() in wyrazenie_wykluczajace:
+                return
+            if(asentence.tokens()[index].orth_utf8().lower()=="jak"):
+                 if not asentence.tokens()[index+1].orth_utf8().lower() in wyrazenie_wykluczajace2:
+                   result.add_sure_comma(index-1, channel_name)
+            index+=1
 
 def bez_przecinka_po(asentence, result):
     channel_name = "BezPrzecinkaPo"
