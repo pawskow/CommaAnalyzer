@@ -143,7 +143,7 @@ def wyrazenie_srodek(asentence, result):
         if first_indice<1:
             continue #poczatek zdania
 
-    result.add_sure_comma(first_indice+1, channel_name)
+    result.add_sure_comma(first_indice, channel_name)
 
 def dwa_podobne_skladniki(asentence, result): #prosta metoda na powtórzenia
   index=1
@@ -277,3 +277,13 @@ def mozliwy_rozdzielacz(asentence, result):
     for ann in ann_vec:
         first_index = ann.indices[0]
         result.add_comma(first_index-1, 0.6, "Rozdzielacz")
+
+def bez_przecinka_pomiedzy(asentence, result):
+    #wstawia spojniki zlozone
+    channel_name = "BezPrzecinkaPomiedzy"
+    if not asentence.has_channel(channel_name):
+        return
+    chan = asentence.get_channel(channel_name)
+    ann_vec = chan.make_annotation_vector()
+    for ann in ann_vec:
+        map(result.add_sure_not_comma, ann.indices)

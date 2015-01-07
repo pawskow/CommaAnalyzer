@@ -14,6 +14,7 @@ INPUT_FORMAT = 'xces,ann'
 #tutaj wrzucamy metody do odpalania w odpowiedniej kolejnosci
 COMMA_INPUT_METHODS = [
                         comma_input_methods.bez_przecinka_po,
+                        comma_input_methods.bez_przecinka_pomiedzy,
                         comma_input_methods.mozliwy_rozdzielacz,
                         comma_input_methods.spojnik_zlozony,
                         comma_input_methods.wydzielenie,
