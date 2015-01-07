@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 import os
 
-DEBUG = False
-PRINT_ANNOTATED_FILE = False
+DEBUG = True
+PRINT_ANNOTATED_FILE = True
 
 __CURR_DIR__ = os.path.dirname(os.path.abspath(__file__))
 RULES_DIR = os.path.join(__CURR_DIR__, "rules")
@@ -20,6 +20,9 @@ RULE_PARTS = [
 """,
 "            equal(lower(base[0]), \"%s\")",
 """
+        ),
+        cond(
+            not(isannpart(first(M), "%s"))
         ),
         actions(
             mark(M, "%s")

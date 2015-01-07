@@ -36,7 +36,7 @@ match_rules(
 	  apply(
         match(
             optional(inter(class[0], {prep})),
-            inter(class[0], {praet, fin, impt, pcon})
+            inter(class[0], {praet, fin, impt, imps, pcon})
 
         ),
         actions(
