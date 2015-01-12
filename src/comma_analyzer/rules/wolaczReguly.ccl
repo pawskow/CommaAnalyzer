@@ -8,19 +8,6 @@ match_rules(
 			mark(M, "WolaczRzeczownik")
 		)
 	);
-
-	apply(
-		match(
-			inter(class[-1], {praet, fin, impt}),
-			repeat(
-				not(inter(class[0], {praet, fin, interp, impt}))
-			)
-		),
-		actions(
-			mark(M, "PodzdanieZCzasownikiemNaPoczatku")
-		)
-	)
-
 )
 
 

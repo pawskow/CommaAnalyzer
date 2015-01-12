@@ -62,22 +62,10 @@ def zwykly_spojnik(asentence, result):
             previous_end_index = ann.indices[-1]
             continue #poczatek zdania, nie ma spacji ("moglby"), juz byl wczesniej spojnik
         previous_end_index = ann.indices[-1]
-        zloz = "SpojnikZlozony"
-        if zloz not in asentence.all_channels():
-             result.add_sure_comma(first_indice-1, channel_name)
+        if _check_token_belong_to_any(asentence.tokens()[first_indice-1], ["interp"]):
+           continue
         else:
-              chan = asentence.get_channel(zloz)
-              ann_vec = chan.make_annotation_vector()
-              for ann in ann_vec:
-                    ann_lenZ = len(ann.indices)
-                    first = ann.indices[0]
-                    if(first-1<first_indice and (first+ann_lenZ)>first_indice):#jezeli spojnik pojedynczy jest czescia któregos ze zlozonych to olac
-                        continue
-                    else:
-                         if _check_token_belong_to_any(asentence.tokens()[first_indice-1], ["interp"]):
-                            continue
-                         else:
-                            result.add_sure_comma(first_indice-1, channel_name)
+           result.add_sure_comma(first_indice-1, channel_name)
 
 def wydzielenie(asentence, result):
     #szuka typowych wyrażeń, które zwyczajowo są wydzielone przecinkami czyli przed i po wyrazeniu wstawiam
@@ -230,7 +218,7 @@ def bez_przecinka_po(asentence, result):
 
 def wolacz_na_poczatku_zdania(asentence, result):
     channel_name = "WolaczRzeczownik"
-    podzdanie_channel_name = "PodzdanieZCzasownikiemNaPoczatku"
+    podzdanie_channel_name = "Orzeczenie"
     if not asentence.has_channel(channel_name):
         return
 

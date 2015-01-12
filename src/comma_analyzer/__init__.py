@@ -25,7 +25,7 @@ RULE_PARTS = [
             not(isannpart(first(M), "%s"))
         ),
         actions(
-            mark(M, "%s")
+            remark(M, "%s")
         )
     )""",
 ")"
