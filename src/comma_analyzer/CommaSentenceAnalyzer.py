@@ -36,8 +36,10 @@ class CommaSentenceAnalyzer(object):
     def __init__(self):
         self.__wccl_files = []
         tagset = corpus2.get_named_tagset(TAGSET)
+
         p = wccl.Parser(tagset)
         for f in get_wccl_files():
+
             self.__wccl_files.append(p.parseWcclFileFromPath(f, RULES_DIR))
 
     def do(self, sentence):
